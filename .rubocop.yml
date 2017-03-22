@@ -10,6 +10,11 @@
 # Cop supports --auto-correct.
 # Configuration parameters: Include.
 # Include: **/Gemfile, **/gems.rb
+
+AllCops:
+  Exclude:
+   - 'db/schema.rb'
+
 Bundler/OrderedGems:
   Exclude:
 
@@ -18,7 +23,10 @@ Bundler/OrderedGems:
 # Configuration parameters: AllowHeredoc, AllowURI, URISchemes, IgnoreCopDirectives, IgnoredPatterns.
 # URISchemes: http, https
 Metrics/LineLength:
-  Max: 130
+  Max: 10000
+
+Metrics/MethodLength:
+  Max: 100
 
 # Offense count: 9
 Style/Documentation:
