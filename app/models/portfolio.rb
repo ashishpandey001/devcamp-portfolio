@@ -1,6 +1,7 @@
 # Portfolio model to interact with the portfolios table
 class Portfolio < ApplicationRecord
   include Placeholder
+  has_many :technologies
   validates :title, :body, :main_image, :thumb_image, presence: true
 
   def self.angular

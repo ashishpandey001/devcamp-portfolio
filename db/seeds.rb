@@ -33,3 +33,10 @@ end
 end
 
 Rails.logger.debug '9 portfolio items created!'
+
+3.times do |technology|
+  Portfolio.last.technologies.create!(
+    name: "Technology #{technology}"
+  )
+end
+Rails.logger.debug '3 technologies created!'
