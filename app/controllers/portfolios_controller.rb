@@ -1,7 +1,7 @@
 # Controller for managing Portfolios
 class PortfoliosController < ApplicationController
   def index
-    @portfolio_items = Portfolio.where(subtitle: 'Angular')
+    @portfolio_items = Portfolio.all
   end
 
   def angular
