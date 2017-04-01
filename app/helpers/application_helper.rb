@@ -11,4 +11,8 @@ module ApplicationHelper
     greeting = "Thanks for visiting me via #{session[:source]}, You're seeing the #{layout_name} layout"
     content_tag(:p, greeting, class: 'source-greeting') if session[:source]
   end
+
+  def copyright_generator
+    Hmaster0ViewTool::Renderer.copyright('Ashish Pandey', 'All rights reserved')
+  end
 end
