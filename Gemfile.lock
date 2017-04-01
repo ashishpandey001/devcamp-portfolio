@@ -100,6 +100,8 @@ GEM
     orm_adapter (0.5.0)
     parser (2.4.0.0)
       ast (~> 2.2)
+    petergate (1.7.0)
+      activerecord (> 4.0.0)
     pg (0.20.0)
     powerpack (0.1.1)
     pry (0.10.4)
@@ -205,6 +207,7 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
+  petergate (~> 1.7)
   pg (~> 0.18)
   pry-byebug
   puma (~> 3.0)
