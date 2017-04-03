@@ -122,7 +122,7 @@
   */
 
  .cover {
-   padding: 0 1.5rem;
+   padding: 6rem 1.5rem;
  }
  .cover .btn-lg {
    padding: .75rem 1.25rem;
@@ -155,7 +155,7 @@
    }
    /* Start the vertical centering */
    .site-wrapper-inner {
-     vertical-align: middle;
+     //vertical-align: middle;
    }
    /* Handle the widths */
    .masthead,
@@ -178,7 +178,18 @@
 .auth-links a{
   color: black;
 }
+
 .card-block{
   color: black;
   text-align: left;
+}
+
+.register-text{
+  text-align: right;
+}
+
+.login > .card{
+  width: 22rem;
+  margin: 0 auto;
+  float: none;
 }
