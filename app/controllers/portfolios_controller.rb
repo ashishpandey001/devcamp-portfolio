@@ -10,8 +10,8 @@ class PortfoliosController < ApplicationController
   def sort
     params[:order].each do |_key, value|
       Portfolio.find(value[:id]).update(position: value[:position])
-      render plain: 'OK' # render nothing: true has been deprecated
     end
+    render plain: 'OK' # render nothing: true has been deprecated
   end
 
   def angular
@@ -60,7 +60,7 @@ class PortfoliosController < ApplicationController
   private
 
   def portfolio_params
-    params.require(:portfolio).permit(:title, :subtitle, :body, technologies_attributes: [:name])
+    params.require(:portfolio).permit(:title, :subtitle, :body, :main_image, :thumb_image, technologies_attributes: [:name])
   end
 
   def set_portfolio_item
