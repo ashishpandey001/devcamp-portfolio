@@ -2,9 +2,16 @@
 class PortfoliosController < ApplicationController
   layout 'portfolio'
   before_action :set_portfolio_item, only: [:edit, :show, :update, :destroy]
-  access all: [:show, :index, :angular], user: { except: [:new, :create, :edit, :update, :destroy] }, site_admin: :all
+  access all: [:show, :index, :angular], user: { except: [:new, :create, :edit, :update, :destroy, :sort] }, site_admin: :all
   def index
-    @portfolio_items = Portfolio.all
+    @portfolio_items = Portfolio.by_position
+  end
+
+  def sort
+    params[:order].each do |_key, value|
+      Portfolio.find(value[:id]).update(position: value[:position])
+      render plain: 'OK' # render nothing: true has been deprecated
+    end
   end
 
   def angular
