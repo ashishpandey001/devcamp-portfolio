@@ -10,8 +10,8 @@ class PortfoliosController < ApplicationController
   def sort
     params[:order].each do |_key, value|
       Portfolio.find(value[:id]).update(position: value[:position])
-      render plain: 'OK' # render nothing: true has been deprecated
     end
+    render plain: 'OK' # render nothing: true has been deprecated
   end
 
   def angular
