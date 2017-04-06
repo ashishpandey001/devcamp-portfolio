@@ -168,7 +168,7 @@ body {
  .masthead,
  .mastfoot,
  .cover-container {
-   width: 55rem;
+   width: 65rem;
  }
 }
 /*
@@ -212,6 +212,20 @@ body {
   background: image-url('home_bg.png') no-repeat;
   background-size: cover;
 }
+
 .app-footer{
   color: white;
+}
+
+.tech-news{
+  color: black;
+  margin: 20px;
+}
+
+.tech-news a{
+  color: green;
+}
+
+.tech-news > .card{
+  padding: 30px;
 }
