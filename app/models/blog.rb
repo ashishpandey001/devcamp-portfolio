@@ -8,11 +8,11 @@ class Blog < ApplicationRecord
 
   validates :title, :body, presence: true
 
-  def self.special_blogs
+  def self.all_blogs
     all
   end
 
-  def self.featured_blogs
-    limit(2)
+  def self.recently_created_blogs
+    order('created_at DESC').per(5)
   end
 end
